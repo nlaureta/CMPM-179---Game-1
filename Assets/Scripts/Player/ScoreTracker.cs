@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ScoreTracker : MonoBehaviour
 {
     [SerializeField] static private int numCollectibles = 0;
+    [SerializeField] public int totalCollectibles = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class ScoreTracker : MonoBehaviour
     public void collectibleObtained(){
         numCollectibles++;
         //Debug.Log("Collected: " + numCollectibles);
-        if(numCollectibles >= 5){
+        if(numCollectibles >= totalCollectibles){
             SceneManager.LoadScene("Win");
         }
     }
