@@ -10,7 +10,7 @@ public class ScoreTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        numCollectibles = 0;
     }
 
     // Update is called once per frame
@@ -29,9 +29,5 @@ public class ScoreTracker : MonoBehaviour
 
     public int getNumCollectibles(){
         return numCollectibles;
-    }
-
-    public void resetCollectibles(){
-        numCollectibles = 0;
     }
 }
