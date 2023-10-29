@@ -30,4 +30,8 @@ public class ScoreTracker : MonoBehaviour
     public int getNumCollectibles(){
         return numCollectibles;
     }
+
+    public void resetCollectibles(){
+        numCollectibles = 0;
+    }
 }
