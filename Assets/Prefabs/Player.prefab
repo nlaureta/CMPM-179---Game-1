@@ -829,12 +829,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  Jumpforce: 8
+  Jumpforce: 15
   playerHeight: 4
   ground:
     serializedVersion: 2
-    m_Bits: 1
-  groundDrag: 3.5
+    m_Bits: 256
+  groundDrag: -1.85
   orientation: {fileID: 7645009298088829672}
 --- !u!114 &-8103367947130400020
 MonoBehaviour:
