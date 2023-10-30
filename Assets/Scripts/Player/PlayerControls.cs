@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     public float speed = 10.0f;
+    public float Jumpforce;
     private Vector3 scale;
     Rigidbody rb;
 
@@ -51,9 +52,17 @@ public class PlayerControls : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f+0.2f, ground);
         Debug.DrawRay(transform.position, Vector3.down, Color.yellow, playerHeight * 0.5f+0.2f);
         if(grounded){
+            Debug.Log("Grounded");
             rb.drag=groundDrag;
+            
+            if (Input.GetKeyDown(KeyCode.Space)){
+                Debug.Log("Space is pressed");
+                rb.AddForce(Vector3.up * Jumpforce, ForceMode.Impulse);
+            }
+            
 
-        }else {
+        }
+        else {
             rb.drag=0;
         }
     }
