@@ -28,6 +28,8 @@ public class ScoreTracker : MonoBehaviour
         Debug.Log("Collected: " + numCollectibles);
         text.text = "Collectable: " + numCollectibles;
         if (numCollectibles >= totalCollectibles){
+            Debug.Log("Reached 5");
+            text.text = "Goal: " + numCollectibles;
             SceneManager.LoadScene("Win");
         }
     }
